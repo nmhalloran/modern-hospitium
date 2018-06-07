@@ -81,11 +81,6 @@
   width: 50px;
 }
 
-
- div {
-   /* background-color: red; */
- }
-
  h1 {
    font-size: 16px;
    display: block;
@@ -93,10 +88,66 @@
 
  .login-form-container {
    background-color: #fff;
+   min-width: 500px;
+   min-height: 579px;
    border-bottom: 2px solid rgba(0,0,0,0.15);
-   border-radius: 2px;
+   border-radius: 8px;
    margin: 10px auto;
    position: relative;
+ }
+
+ .login-form-header {
+   position: relative;
+   width: 100%;
+   height: 60px;
+ }
+
+ .login-form-header p {
+   font-size: 20px;
+   color: #34495E;
+   position: absolute;
+   top: 22%;
+   left: 7%;
+   transform: translate(0, -50)
+ }
+
+ .close-x {
+   position: absolute;
+   top: 50%;
+   right: 7%;
+   cursor: pointer;
+   font-size: 24px;
+   color: lightgrey;
+ }
+
+ .login-form-box {
+   padding: 40px;
+   text-align: center;
+   border-top: 0.5px solid lightgray;
+ }
+
+ .login-input {
+   width: 100%;
+   height: 50px;
+   margin-top: 7px;
+   font-size: 15px;
+   background-color: white;
+   border-radius: 4px;
+   box-sizing: border-box;
+ }
+
+ .session-submit {
+   width: 100%;
+   padding: 8px 12px;
+   height: 45px;
+   background-color: #1996db;
+   color: white;
+   margin-top: 40px;
+   margin-bottom: 20px;
+   font-size: 15px;
+   border: 0;
+   box-sizing: border-box;
+   border-radius: 3px;
  }
 
  .signup {
@@ -109,7 +160,7 @@
    font-size: 15px;
    font-weight: bold;
    line-height: 1.5;
-   width: 60px;
+   width: 100px;
    padding: 8px 12px;
    text-align: center;
    text-decoration: none;
@@ -127,10 +178,26 @@
   font-size: 15px;
   font-weight: bold;
   line-height: 1.5;
-  width: 100px;
+  width: 160px;
   padding: 8px 12px;
   text-align: center;
   text-decoration: none;
+}
+.modal-button {
+  display: block;
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 20px auto 0;
+  width: 140px;
+  color: grey;
+  border: 1px solid #287FB8;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+
+p {
+  color: lightgrey;
+  line-height: 1.5;
 }
 
  header {
@@ -174,11 +241,4 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.close-x {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
 }
