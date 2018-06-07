@@ -13,3 +13,71 @@
  *= require_tree .
  *= require_self
  */
+
+ html, body {
+   height: 100%;
+
+ }
+ body {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+ }
+
+ div {
+   background-color: red;
+ }
+
+ h1 {
+   font-size: 24px;
+ }
+
+ .login-form-container {
+   background-color: #fff;
+   border-bottom: 2px solid rgba(0,0,0,0.15);
+   border-radius: 2px;
+   margin: 10px auto;
+   position: relative;
+ }
+ .login {
+       border: 1px solid #287FB8;
+       border-radius: 3px;
+       color: #287fb8;
+       cursor: pointer;
+       display: inline-block;
+       font-size: 15px;
+       font-weight: bold;
+       line-height: 1.5;
+       max-width: 240px;
+       min-width: 6em;
+       padding: 8px 12px;
+       text-align: center;
+       text-decoration: none;
+       -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+       transition: background-color 0.3s ease, border-color 0.3s ease;
+       white-space: normal;
+ }
+
+.signup {
+  background-color: #287FB8;
+  border: 1px solid #287FB8;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  max-width: 240px;
+  min-width: 6em;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+ header {
+
+   background-color: white;
+   display: flex;
+   justify-content: space-between;
+
+ }
