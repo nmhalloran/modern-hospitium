@@ -15,9 +15,18 @@ const App = () => (
       </div>
     </header>
     <section className="mod-join">
-      <h2 className="mod-join-title">
+      <h2 className="big-text over-face">
         Stay with Local and Meet Travelers
       </h2>
+      <h3 className="mod-join-sub">
+        Share Authentic Travel Experiences
+      </h3>
+    </section>
+    <section className="mod-testimonials image-overlay">
+      <h2 className="big-text in-testimonial">
+        Why Join?
+      </h2>
+      <hr className="mod-short mod-white" />
     </section>
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />

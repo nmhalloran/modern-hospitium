@@ -28,14 +28,57 @@
   background-image: url("Couchsurfing_main_page.jpg");
   background-size: cover;
   text-align: center;
-  vertical-align: center;
+
 }
 
-.mod-join-title {
+.big-text{
+  display: block;
   font-size: 56px;
   color: white;
   font-weight: lighter;
   line-height: 1.1;
+  margin-bottom: 0;
+}
+.over-face {
+  padding-top: 280px;
+}
+
+.in-testimonial {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-top: 70px;
+}
+
+.mod-join-sub {
+  display: block;
+  font-size: 24px;
+  color: white;
+  font-weight: lighter;
+  line-height: 1.1;
+  margin-top: 5px;
+}
+
+.mod-testimonials {
+  height: 1000px;
+  background-color: #287fb8;
+  text-align: center;
+  z-index: 2;
+}
+
+.image-overlay {
+  background-image: url("background-house.png");
+  z-index: 3;
+}
+
+.mod-white {
+  background-color: #fff;
+  color: #fff;
+}
+
+.mod-short {
+  height: 2px;
+  margin-bottom: 1em;
+  width: 50px;
 }
 
 
@@ -85,14 +128,13 @@
   font-weight: bold;
   line-height: 1.5;
   width: 100px;
-  /* min-width: 6em; */
   padding: 8px 12px;
   text-align: center;
   text-decoration: none;
 }
 
  header {
-   display: flex;
+   display: block;
    justify-content: center;
    align-items: center;
    background-color: #fff;
@@ -105,11 +147,14 @@
 
  }
 
+
+
  .header-wrapper {
    display: flex;
    justify-content: center;
    align-items: center;
    margin: 0 auto;
+   margin-top: 13px;
    width: 1280px;
    justify-content: space-between;
    position: relative;
