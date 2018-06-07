@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
-      <Link className="login" to="/login">Login</Link>
-      &nbsp;or&nbsp;
-      <Link className="signup" to="/signup">Join</Link>
+      <Link className="login" to="/login">Join</Link>
+      
+      <Link className="signup" to="/signup">Log In</Link>
     </nav>
   );
   const personalGreeting = () => (
