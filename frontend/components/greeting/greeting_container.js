@@ -9,7 +9,6 @@ const mapStateToProps = ({ session }) => {
     currentUser: session.currentUser
   };
 };
-const demo = {username: 'aalfarho', password: '123456'}
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
   openModal: modal => dispatch(openModal(modal)),
