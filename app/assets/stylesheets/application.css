@@ -23,12 +23,29 @@
 
  }
 
+.mod-join {
+  height: 600px;
+  background-image: url("Couchsurfing_main_page.jpg");
+  background-size: cover;
+  text-align: center;
+  vertical-align: center;
+}
+
+.mod-join-title {
+  font-size: 56px;
+  color: white;
+  font-weight: lighter;
+  line-height: 1.1;
+}
+
+
  div {
-   background-color: red;
+   /* background-color: red; */
  }
 
  h1 {
-   font-size: 24px;
+   font-size: 16px;
+   display: block;
  }
 
  .login-form-container {
@@ -39,7 +56,7 @@
    position: relative;
  }
 
- .login {
+ .signup {
    border: 1px solid #287FB8;
    margin-right: 20px;
    border-radius: 3px;
@@ -56,7 +73,7 @@
    white-space: normal;
  }
 
-.signup {
+.login {
   background-color: #287FB8;
   border: 1px solid #287FB8;
   border-radius: 3px;
@@ -67,7 +84,7 @@
   font-size: 15px;
   font-weight: bold;
   line-height: 1.5;
-  max-width: 100px;
+  width: 100px;
   /* min-width: 6em; */
   padding: 8px 12px;
   text-align: center;
@@ -75,10 +92,26 @@
 }
 
  header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   border-bottom: 1px solid rgba(0,0,0,0.15);
+   min-height: 63px;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 2;
 
-  background-color: white;
-  display: flex;
-  height: 63px;
-  justify-content: space-between;
+ }
+
+ .header-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+   width: 1280px;
+   justify-content: space-between;
+   position: relative;
 
  }

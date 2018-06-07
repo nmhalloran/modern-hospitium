@@ -9,9 +9,16 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>MODERN HOSPITIUM!</h1>
-      <GreetingContainer />
+      <div className="header-wrapper">
+        <h1>MODERN HOSPITIUM</h1>
+        <GreetingContainer />
+      </div>
     </header>
+    <section className="mod-join">
+      <h2 className="mod-join-title">
+        Stay with Local and Meet Travelers
+      </h2>
+    </section>
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
   </div>
