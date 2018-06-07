@@ -20,6 +20,7 @@
  }
  body {
   font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin: 0;
 
  }
 
@@ -204,7 +205,7 @@ p {
    align-items: center;
    background-color: #fff;
    border-bottom: 1px solid rgba(0,0,0,0.15);
-   min-height: 63px;
+   height: 60px;
    position: fixed;
    top: 0;
    width: 100%;
@@ -214,13 +215,12 @@ p {
 
  .header-wrapper {
    display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: 0 auto;
-   margin-top: 13px;
    width: 1280px;
+   top: 20%;
+   left: 50%;
+   transform: translateX(-50%);
    justify-content: space-between;
-   position: relative;
+   position: absolute;
 
  }
 
@@ -239,4 +239,16 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.header-group {
+  display: flex;
+  height: 60px;
+}
+
+.header-button {
+  margin: 20px;
+  font-size: 15px;
+  height: 30px;
+  border-radius: 5px;
 }
