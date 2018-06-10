@@ -14,32 +14,54 @@
  *= require_self
  */
 
+ html, body, header, nav, h1, a,
+ ul, li, strong, main, button, i,
+ section, img, div, h2, p, form,
+ fieldset, label, input, textarea,
+ span, article, footer, time, small {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: 0;
+   font: inherit;
+   color: inherit;
+   text-decoration: inherit;
+   vertical-align: inherit;
+   box-sizing: inherit;
+   background: transparent;
+ }
+
  html, body {
    height: 100%;
+ }
 
+ h2 {
+   margin: 0;
+   border: 0;
+   padding: 0;
  }
  body {
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   margin: 0;
-
  }
 
 .mod-join {
-  height: 600px;
+  height: 660px;
   background-image: url(image_path("Couchsurfing_main_page.jpg"));
   background-size: cover;
+  background-position: center center;
   text-align: center;
-
 }
 
 .big-text{
   display: block;
+  font-family: 'Lato-Light';
   font-size: 56px;
   color: white;
-  font-weight: lighter;
   line-height: 1.1;
   margin-bottom: 0;
 }
+
 .over-face {
   padding-top: 280px;
 }
@@ -52,6 +74,7 @@
 
 .mod-join-sub {
   display: block;
+  font-family: 'Lato-Light';
   font-size: 24px;
   color: white;
   font-weight: lighter;
@@ -60,10 +83,41 @@
 }
 
 .mod-testimonials {
-  height: 1000px;
+  height: 1100px;
+  width: 100%;
   background-color: #287fb8;
   text-align: center;
   z-index: 2;
+}
+
+.info-box-container {
+  width: 90%;
+  max-width: 1220px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+
+}
+
+.info-box {
+  background-color: #1996db;
+  width: 33%;
+  height: 777px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  z-index: 4;
+  padding: 30px;
+}
+
+.info-box-title {
+  color: white;
+  font-size: 15px;
+}
+
+.info-image {
+  width: 100%;
+  margin-top: 30px;
+
 }
 
 .image-overlay {
@@ -80,6 +134,7 @@
   height: 2px;
   margin-bottom: 1em;
   width: 50px;
+  display: block;
 }
 
  h1 {
@@ -130,11 +185,11 @@
  .login-input {
    width: 100%;
    height: 50px;
+   padding-left: 10px;
    margin-top: 7px;
    font-size: 15px;
    background-color: white;
    border-radius: 4px;
-   box-sizing: border-box;
  }
 
  .session-submit {
@@ -142,6 +197,7 @@
    padding: 8px 12px;
    height: 45px;
    background-color: #1996db;
+   cursor: pointer;
    color: white;
    margin-top: 40px;
    margin-bottom: 20px;
@@ -152,8 +208,9 @@
  }
 
  .signup {
+   cursor: pointer;
    border: 1px solid #287FB8;
-   margin-right: 20px;
+   box-sizing: border-box;
    border-radius: 3px;
    color: #287fb8;
    cursor: pointer;
@@ -170,8 +227,9 @@
 .login {
   background-color: #287FB8;
   border: 1px solid #287FB8;
+  box-sizing: border-box;
   border-radius: 3px;
-  margin-right: 20px;
+  margin-right: 10px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -182,8 +240,10 @@
   text-align: center;
   text-decoration: none;
 }
+
 .modal-button {
   display: block;
+  cursor: pointer;
   font-size: 15px;
   line-height: 1.5;
   margin: 20px auto 0;
@@ -198,30 +258,47 @@ p {
   color: lightgrey;
   line-height: 1.5;
 }
+.errors {
+  color: red;
+  text-decoration: none;
+}
 
  header {
    display: block;
    justify-content: center;
-   align-items: center;
    background-color: #fff;
    border-bottom: 1px solid rgba(0,0,0,0.15);
-   height: 60px;
+   height: 63px;
    position: fixed;
    top: 0;
    width: 100%;
-   z-index: 2;
+   z-index: 5;
 
  }
 
- .header-wrapper {
-   display: flex;
-   width: 1280px;
-   top: 20%;
-   left: 50%;
-   transform: translateX(-50%);
-   justify-content: space-between;
-   position: absolute;
+.logo {
+  font-family: "JennaSue", sans-serif;
+  font-feature-settings: 'kern', 'liga' 1, 'pnum';
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: #e64914;
+}
 
+.header-wrapper {
+  display: flex;
+  width: 85%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  position: absolute;
+
+}
+
+
+ .header-name {
+   font-size: 40px;
  }
 
  .modal-background {
@@ -243,12 +320,21 @@ p {
 
 .header-group {
   display: flex;
-  height: 60px;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-name {
+  margin: 20px;
 }
 
 .header-button {
-  margin: 20px;
+  margin: 30px 0px 20px;
   font-size: 15px;
-  height: 30px;
+  height: 20px;
+  padding: 5px;
+  border: 1px solid black;
   border-radius: 5px;
 }

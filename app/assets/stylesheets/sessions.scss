@@ -1,3 +1,37 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.dash-body {
+  width: 100;
+  background-color: #f1efea;
+}
+
+.dash-main {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+
+.main-content {
+  display: flex;
+  width: 75%;
+  max-width: 960px;
+  margin: 73px 10px 10px 10px;
+  box-sizing: border-box;
+  height: 3000px;
+  background-color: blue;
+}
+
+.sidebar {
+  display: flex;
+  width: 25%;
+  max-width: 320px;
+  box-sizing: border-box;
+  margin:  73px 10px 10px 10px;
+  height: 3000px;
+  background-color: red;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal);
+    this.props.processForm(user).then(this.props.closeModal)
   }
 
   renderErrors() {
@@ -43,15 +43,15 @@ class SessionForm extends React.Component {
         <div onClick={this.props.closeModal} className="close-x">X</div>
       </div>
       <br/>
-      {this.renderErrors()}
         <form onSubmit={this.handleSubmit} className="login-form-box">
+        <p className="errors">{this.renderErrors()}</p>
           <div className="login-form">
             <br/>
             <label>
-              <input type="text"
+              <input className="type-indent" type="text"
                 value={this.state.username}
                 onChange={this.update('username') }
-                placeholder=" Username"
+                placeholder="Username"
                 className="login-input"
               />
             </label>
@@ -60,7 +60,7 @@ class SessionForm extends React.Component {
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                placeholder=" Email"
+                placeholder="Password"
                 className="login-input"
               />
             </label>

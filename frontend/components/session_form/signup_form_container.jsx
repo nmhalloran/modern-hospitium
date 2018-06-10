@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { signup } from '../../actions/session_actions';
 import SessionForm from './session_form';
@@ -8,7 +8,7 @@ import SessionForm from './session_form';
 const mapStateToProps = ({ errors }) => {
   return {
     errors: errors.session,
-    formType: 'Join with Email',
+    formType: 'Join Modern Hospitium!',
     question: "Already a member?",
     navLink: <Link to="/login">log in instead</Link>,
   };
