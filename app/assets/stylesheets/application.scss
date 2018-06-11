@@ -338,3 +338,18 @@ p {
   border: 1px solid black;
   border-radius: 5px;
 }
+
+footer {
+  background-color: #fff;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  font-size: 0.9em;
+  padding: 2.2rem 0 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  margin: 0 auto;
+  max-width: 1280;
+  width: 100%;
+}

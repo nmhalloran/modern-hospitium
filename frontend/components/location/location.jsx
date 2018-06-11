@@ -37,7 +37,7 @@ class Location extends React.Component {
     var topPicStyle = {
       display: 'flex',
       width: "100%",
-      height: "360px",
+      height: "340px",
       backgroundImage: `url(${this.props.city.img_url})`,
       opacity: '0.8',
       backgroundPosition: "center center",
@@ -56,11 +56,14 @@ class Location extends React.Component {
         </div>
         </section>
         <div className='dash-body'>
-          <div className='dash-main'>
+          <div className='location-main'>
             <div className='location-container'>
-              <section className='events-hosts'></section>
-              <section className='events-hosts'></section>
-              <section className='events-hosts-right'></section>
+              <section className='hosts-visitor'></section>
+              <section className='hosts-visitor'></section>
+              <section className='hosts-visitor-right'></section>
+            </div>
+            <div className='events-container'>
+
             </div>
           </div>
         </div>

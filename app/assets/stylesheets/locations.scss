@@ -8,6 +8,13 @@
   justify-content: center;
 }
 
+.location-main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+}
+
 .location-name-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -17,36 +24,56 @@
   vertical-align: bottom;
 }
 .location-container {
+  display: flex;
+  height: 500px;
   width: 100%;
   max-width: 1280px;
-  display: flex;
-  margin: 10px 10px;
-  height: 3000px;
 
 }
+.mod-join {
+  height: 660px;
+  background-image: url(image_path("Couchsurfing_main_page.jpg"));
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+}
 
-.events-hosts {
+.mod-testimonials {
+  height: 1100px;
+  width: 100%;
+  background-color: #287fb8;
+  text-align: center;
+  z-index: 2;
+}
+
+.events-container {
   background-color: white;
+  margin-top: 35px;
+  width: 100%;
+  height: 875px;
+}
+
+.hosts-visitor {
+  display: flex;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 33%;
-  height: 777px;
+  height: 500px;
   margin-right: 15px;
   box-sizing: border-box;
   z-index: 4;
-  padding: 10px;
 }
-.events-hosts-right {
+.hosts-visitor-right {
+  display: flex;
+  margin-top: 10px;
   background-color: white;
   width: 33%;
-  height: 777px;
+  height: 500px;
   box-sizing: border-box;
   z-index: 4;
-  padding: 10px;
 }
 
-
-.events-hosts {
-
-}
 
 //USES DASH-MAIN and DASH-BODY for formatting
 

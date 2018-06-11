@@ -26,6 +26,10 @@ const App = () => (
       <AuthRoute exact path='/' component={RootPage} />
       <Redirect from="/*" to='/' />
     </Switch>
+    <footer>
+      <div className="footer-container">
+      </div>
+    </footer>
   </div>
 );
 
