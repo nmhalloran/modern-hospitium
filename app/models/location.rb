@@ -1,5 +1,7 @@
 class Location < ApplicationRecord
-  validates :name, :latitude, :longitude, presence: true
+  validates :name, presence: true
 
+  has_many :users
+  has_many :events
 
 end

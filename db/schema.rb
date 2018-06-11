@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180606023459) do
 
   create_table "locations", force: :cascade do |t|
     t.string "name", null: false
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -41,6 +42,7 @@ ActiveRecord::Schema.define(version: 20180606023459) do
     t.string "username", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

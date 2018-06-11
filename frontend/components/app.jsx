@@ -4,7 +4,8 @@ import {Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
-import LocationContainer from './dashboard/location_container';
+import DashboardContainer from './dashboard/dashboard_container';
+import LocationContainer from './location/location_container';
 import RootPage from './home_page/root_page';
 import Dashboard from './dashboard/dashboard';
 import SignupFormContainer from './session_form/signup_form_container';
@@ -20,7 +21,8 @@ const App = () => (
       </div>
     </header>
     <Switch>
-      <ProtectedRoute exact path='/dashboard' component={LocationContainer} />
+      <ProtectedRoute exact path='/locations/:id' component={LocationContainer} />
+      <ProtectedRoute exact path='/dashboard' component={DashboardContainer} />
       <AuthRoute exact path='/' component={RootPage} />
       <Redirect from="/*" to='/' />
     </Switch>

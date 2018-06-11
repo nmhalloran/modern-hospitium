@@ -21,7 +21,6 @@ const url = 'https://maps.googleapis.com/maps/api/geocode/json?address='
 const combinedUrl = url + address + key;
 
 export const geocode = location => {
-  console.log(location, "  goodbye")
   return $.ajax({
     method: 'GET',
     url: combinedUrl
