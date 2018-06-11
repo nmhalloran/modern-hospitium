@@ -17,7 +17,6 @@ locations = Location.create([
   {name: "Sonoma", img_url: "https://imgur.com/BkrKkJm.png" },
   {name: "Rome", img_url: "https://imgur.com/0aNRYn4.png" },
   {name: "Unknown", img_url: "https://imgur.com/beBRku6.png" },
-  {name: "Boston", img_url: "https://imgur.com/35FTluS.png" },
   {name: "Portland, OR", img_url: "https://imgur.com/Di7pMUp.png"},
   {name: "Portland, ME", img_url: "https://imgur.com/JeOPtZJ.png"},
   {name: "Paris", img_url: "https://imgur.com/jZs6WKz.png"}

@@ -144,8 +144,8 @@
 
  .login-form-container {
    background-color: #fff;
-   min-width: 500px;
-   min-height: 579px;
+   width: 500px;
+   height: 579px;
    border-bottom: 2px solid rgba(0,0,0,0.15);
    border-radius: 8px;
    margin: 10px auto;
@@ -189,6 +189,7 @@
    margin-top: 7px;
    font-size: 15px;
    background-color: white;
+   border: 1px solid lightgrey;
    border-radius: 4px;
  }
 
@@ -206,6 +207,11 @@
    box-sizing: border-box;
    border-radius: 3px;
  }
+
+ .login-signup {
+   margin-top: 15px;
+   height: 63px;
+  }
 
  .signup {
    cursor: pointer;
@@ -263,21 +269,26 @@ p {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+}
+
  header {
-   display: block;
    justify-content: center;
    background-color: #fff;
    border-bottom: 1px solid rgba(0,0,0,0.15);
    height: 63px;
    position: fixed;
+   z-index: 10;
    top: 0;
    width: 100%;
-   z-index: 5;
 
  }
 
 .logo {
+  margin-top: 13px;
   font-family: "JennaSue", sans-serif;
+  height: 30px;
   font-feature-settings: 'kern', 'liga' 1, 'pnum';
   font-size: 40px;
   letter-spacing: 1px;
@@ -287,8 +298,8 @@ p {
 
 .header-wrapper {
   display: flex;
+  max-width: 1280px;
   width: 85%;
-  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   justify-content: space-between;
@@ -312,7 +323,7 @@ p {
 }
 
 .modal-child {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -320,20 +331,20 @@ p {
 
 .header-group {
   display: flex;
-  position: absolute;
-  right: 0%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  height: 63px;
+  padding: 15px 0;
+  box-sizing: border-box;
+
 }
 
 .header-name {
-  margin: 20px;
+  margin: 0 auto;
 }
 
 .header-button {
-  margin: 30px 0px 20px;
+  margin: 10px 0px 20px;
   font-size: 15px;
-  height: 20px;
+  height: 30px;
   padding: 5px;
   border: 1px solid black;
   border-radius: 5px;

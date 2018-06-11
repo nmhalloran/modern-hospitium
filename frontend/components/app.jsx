@@ -8,8 +8,27 @@ import DashboardContainer from './dashboard/dashboard_container';
 import LocationContainer from './location/location_container';
 import RootPage from './home_page/root_page';
 import Dashboard from './dashboard/dashboard';
+import SearchBar from './search/search_bar';
 import SignupFormContainer from './session_form/signup_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+
+const Names = [
+  "",
+  "Boston",
+  "San Francisco",
+  "Miami",
+  "Edinburgh",
+  "Budapest",
+  "Istanbul",
+  "Bratislava",
+  "Sonoma",
+  "Rome",
+  "Unknown",
+  "Portland, OR",
+  "Portland, ME",
+  "Paris"
+]
+
 
 const App = () => (
   <div>
@@ -17,6 +36,7 @@ const App = () => (
     <header>
       <div className="header-wrapper">
         <h1 className='logo'>hospitium</h1>
+        <SearchBar names={Names} />
         <GreetingContainer />
       </div>
     </header>

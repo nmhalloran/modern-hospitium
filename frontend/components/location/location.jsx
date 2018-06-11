@@ -17,11 +17,7 @@ class Location extends React.Component {
 
 
   componentWillReceiveProps(newProps) {
-    // console.log(newProps.match.params.id, "newProps");
-    // console.log(this.props.match.params.id, "oldProps");
     if (this.props.match.params.id !== newProps.match.params.id) {
-      // console.log(this.props.match.params.id, "willreceiveProps")
-
       this.props.getCity(newProps.match.params.id);
     }
   }
@@ -58,9 +54,20 @@ class Location extends React.Component {
         <div className='dash-body'>
           <div className='location-main'>
             <div className='location-container'>
-              <section className='hosts-visitor'></section>
-              <section className='hosts-visitor'></section>
-              <section className='hosts-visitor-right'></section>
+              <section className='hosts-visitor'>
+               <div className='host-visitor-header'>
+                <h3>Hosts</h3>
+               </div>
+              </section>
+              <section className='hosts-visitor'>
+                <div className='host-visitor-header'>
+                  <h3>Travelers</h3>
+                </div>
+              </section>
+              <section className='hosts-visitor-right'>
+                <div className='host-visitor-header'>
+                </div>
+              </section>
             </div>
             <div className='events-container'>
 

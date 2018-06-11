@@ -5,7 +5,6 @@ import { geocode } from '../../actions/location_actions';
 import Dashboard from './dashboard';
 
 const mapStateToProps = (state, ownProps) => {
-  state
   return {
     address: state.address
   };

@@ -3,12 +3,11 @@ import React from 'react';
 
 
 const Greeting = ({ currentUser, logout, demoLogin, openModal }) => {
-
   const sessionLinks = () => (
     <nav className="login-signup">
       <button className='login' onClick={() => demoLogin()}>Demo Login!</button>
-      <button className='login' onClick={() => openModal('login')}>Join</button>
-      <button className='signup' onClick={() => openModal('signup')}>Log In</button>
+      <button className='login' onClick={() => openModal('signup')}>Join</button>
+      <button className='signup' onClick={() => openModal('login')}>Log In</button>
 
     </nav>
   );
