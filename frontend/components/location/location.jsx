@@ -29,6 +29,7 @@ class Location extends React.Component {
 
 
   render(newProps) {
+    debugger
 
     var topPicStyle = {
       display: 'flex',
