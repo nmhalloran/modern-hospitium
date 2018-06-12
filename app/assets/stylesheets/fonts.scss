@@ -1,26 +1,5 @@
 /* SPECIAL LOGO FONT */
 @font-face {
   font-family: "JennaSue";
-  src: font_url('/assets/fonts/JennaSue.ttf') format("truetype");
+  src: font_url( asset_path('JennaSue.ttf') )format("truetype");
 }
-// /* FONT FOR STANDARD TEXT */
-// @font-face {
-//  font-family: 'Lato-Light';
-//  font-style: normal;
-//  font-weight: 200;
-//  src: url('/assets/Lato-Thin');
-// }
-//
-// @font-face {
-//  font-family: 'Lato';
-//  font-style: normal;
-//  font-weight: 400;
-//  src: url('/assets/Lato-Regular');
-// }
-//
-// @font-face {
-//  font-family: 'Lato-Bold';
-//  font-style: normal;
-//  font-weight: 700;
-//  src: url('/assets/Lato-Bold');
-// }
