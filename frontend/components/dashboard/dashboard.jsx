@@ -15,7 +15,6 @@ class Dashboard extends React.Component {
     this.props.getAddress(address);
   }
   render() {
-    debugger
     return (
       <div className='dash-body'>
         <div className='dash-main'>
