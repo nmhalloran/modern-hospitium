@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import UsersIndex from '../user-index/user-index';
 
 
 class Location extends React.Component {
@@ -28,17 +29,8 @@ class Location extends React.Component {
   }
 
 
-
-
   render(newProps) {
-    let hosts = this.props.city.users.map(user => {
-      return (
-        <li className='index-pic-container'>
-          <img className='index-pic' src={user.image_url} />
-          <p className='index-title'>{user.username}</p>
-        </li>
-      )
-    });
+
     var topPicStyle = {
       display: 'flex',
       width: "100%",
@@ -71,7 +63,9 @@ class Location extends React.Component {
               </div>
               <div className='host-visitor-content'>
                 <p className='host-visitor-counter'>{`Stay with one of ${this.props.city.users.length} hosts in ${this.props.city.name}`}</p>
-                <ul>{hosts}</ul>
+                <ul>
+                  <UsersIndex hosts={this.props.city.users} />
+                </ul>
               </div>
               </section>
               <section className='hosts-visitor'>

@@ -18,7 +18,10 @@ class Dashboard extends React.Component {
     return (
       <div className='dash-body'>
         <div className='dash-main'>
-          <section className='sidebar'></section>
+          <section className='sidebar'>
+            <div className='sidebar-header'>
+            </div>
+          </section>
           <section className='main-content'></section>
         </div>
       </div>
