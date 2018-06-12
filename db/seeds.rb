@@ -44,25 +44,4 @@ users.push(User.create({username: "nick", password: "123456", image_url: "https:
 end
 
 
-# users = User.create([
-#   {username: ,password: "123456", img_url: users_url.rotate!()[0]},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-#   {username: ,password: "123456", img_url:""},
-
-
-
-
-
-
-
-
 User.create({username: 'NiartenyaW', password: "sweetawesome", image_url: 'https://avatars2.githubusercontent.com/u/8084693?s=400&v=4'})

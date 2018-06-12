@@ -15,6 +15,27 @@
   height: 100%;
 }
 
+.index-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+}
+
+.index-title {
+  color: slategrey;
+  max-width: 100px;
+  overflow: hidden;
+}
+
+.index-pic-container {
+  display: table-cell;
+  text-align: center;
+  padding: 0 15px;
+  max-height: 145px;
+
+}
+
 .location-name-container {
   max-width: 1280px;
   margin: 0 auto;
@@ -42,12 +63,11 @@
   max-width: 1280px;
 
 }
-.mod-join {
-  height: 660px;
-  background-image: url(image_path("Couchsurfing_main_page.jpg"));
-  background-size: cover;
-  background-position: center center;
-  text-align: center;
+
+.host-visitor-counter {
+  color: slategrey;
+  height: 40px;
+  margin: 10px 0;
 }
 
 .mod-testimonials {
@@ -67,7 +87,11 @@
 }
 
 .hosts-visitor {
-  display: flex;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "header"
+  "content";
   background-color: white;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -79,7 +103,7 @@
   z-index: 4;
 }
 .hosts-visitor-right {
-  display: flex;
+  display: grid;
   margin-top: 10px;
   background-color: white;
   width: 33%;
@@ -96,6 +120,18 @@
   justify-content: center;
   color: #22384a;
   border-bottom: 1px solid #f2efeb;
+}
+
+.host-visitor-content {
+  width: 100%;
+  height: 440px;
+  color: slategrey;
+  box-sizing: border-box;
+  padding: 0 10px;
+  text-align: center;
+  grid-area: content;
+  display: table-cell;
+
 }
 
 //USES DASH-MAIN and DASH-BODY for formatting
