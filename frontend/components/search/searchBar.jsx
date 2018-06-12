@@ -38,7 +38,7 @@ export default class SearchBar extends React.Component {
   selectName(event) {
     let name = event.currentTarget.innerText;
     let i = this.props.names.indexOf(name);
-    
+
     this.setState({inputVal: name}, () => (this.props.history.push(`/locations/${i}`), this.setState({inputVal: ""})));
 
   }
@@ -52,12 +52,13 @@ export default class SearchBar extends React.Component {
     return(
       <div className="search-bar-container">
         <div className='auto'>
-          <span className='search-title'>Explore: </span>
+          <span className='search-title'>Explore:</span>
           <input
             onChange={this.handleInput}
             value={this.state.inputVal}
             placeholder='Where are you going?'/>
-            <img className='search-button' src="https://i.imgur.com/pkLnBCb.png" />
+            <span className='search-logo'><i className="fas fa-search"></i></span>
+
           <ul className="search-results-container">
             <ReactCSSTransitionGroup
               transitionName='auto'

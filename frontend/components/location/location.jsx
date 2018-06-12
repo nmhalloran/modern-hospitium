@@ -56,12 +56,16 @@ class Location extends React.Component {
             <div className='location-container'>
               <section className='hosts-visitor'>
                <div className='host-visitor-header'>
-                <h3>Hosts</h3>
+                <h3>Hosts &nbsp; &nbsp;
+                  <i className="fas fa-home" ></i>
+                </h3>
                </div>
               </section>
               <section className='hosts-visitor'>
                 <div className='host-visitor-header'>
-                  <h3>Travelers</h3>
+                <h3>Travelers &nbsp; &nbsp;
+                  <i className="fas fa-plane" ></i>
+                </h3>
                 </div>
               </section>
               <section className='hosts-visitor-right'>

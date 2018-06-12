@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20180606023459) do
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.string "image_url"
+    t.integer "location_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
