@@ -15,6 +15,8 @@ module Couchclone
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+
     config.assets.enabled = true
     config.assets.paths << Rails.root.join('/app/assets/fonts')
   end
