@@ -22,6 +22,19 @@
   height: 300px;
   text-align: left;
 }
+
+.city-name {
+  display: block;
+  padding-top: 210px;
+  height: 100%;
+  font-family: 'Lato';
+  font-size: 56px;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 0;
+  text-shadow: 0 2px 2px rgba(0,0,0,.75);
+}
+
 .location-container {
   display: flex;
   height: 500px;
@@ -85,19 +98,4 @@
   border-bottom: 1px solid #f2efeb;
 }
 
-.host
-
-
 //USES DASH-MAIN and DASH-BODY for formatting
-
-.city-name {
-  display: block;
-  padding-top: 210px;
-  height: 100%;
-  font-family: 'Lato';
-  font-size: 56px;
-  color: white;
-  line-height: 1.1;
-  margin-bottom: 0;
-  text-shadow: 0 2px 2px rgba(0,0,0,.75);
-}

@@ -37,7 +37,7 @@ users_url = ["https://imgur.com/tGTHfTU.png",
 
 users = []
 
-user.push(User.create({username: "nick", password: "123456", image_url: "https://imgur.com/aLAPKce.jpg" , location_id: 2}))
+users.push(User.create({username: "nick", password: "123456", image_url: "https://imgur.com/aLAPKce.jpg" , location_id: 2}))
 
 10.times do
   users.push(User.create({username: Faker::Internet.user_name, password: "123456", image_url: users_url.rotate!()[0], location_id: (1 + rand(13))}))
