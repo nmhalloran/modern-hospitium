@@ -21,6 +21,11 @@
   margin: 6px 0 0 0;
 }
 
+.shift {
+  margin-top: 27px;
+  color: #c7ced5;
+}
+
 .auto{
   display: flex;
   border: 2px solid rgba(0,0,0,0.15);
@@ -74,4 +79,8 @@
 .auto-leave.auto-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in, transform 300ms ease-in;
+}
+
+button {
+  cursor: pointer;
 }

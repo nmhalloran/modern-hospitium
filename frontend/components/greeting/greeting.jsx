@@ -11,10 +11,22 @@ const Greeting = ({ currentUser, logout, demoLogin, openModal }) => {
 
     </nav>
   );
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
   const personalGreeting = () => (
     <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
-      <button className="header-button" onClick={logout}>Log Out</button>
+      <button onClick={myFunction}>
+        <img className='header-pic' src={currentUser.image_url} />
+        <i className="shift fas fa-caret-down"></i>
+      </button>
+
+      <ul id="myDropdown" className='header-notifications'>
+        <button className='header-notification-items' onClick={logout}>Log Out</button>
+        <button className='header-notification-items' onClick={logout}>Profile</button>
+        <button className='header-notification-items' onClick={logout}>Profile</button>
+      </ul>
     </hgroup>
   );
 

@@ -1,1 +1,1 @@
-json.extract! location, :id, :name, :img_url
+json.extract! location, :id, :name, :img_url, :users, :events
