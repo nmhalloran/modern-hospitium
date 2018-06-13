@@ -63,7 +63,7 @@ class Location extends React.Component {
               </div>
               <div className='host-visitor-content'>
                 <p className='host-visitor-counter'>{`Stay with one of ${this.props.city.users.length} hosts in ${this.props.city.name}`}</p>
-                <ul>
+                <ul className='user-index-container'>
                   <UsersIndex hosts={this.props.city.users} />
                 </ul>
               </div>

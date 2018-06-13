@@ -7,8 +7,12 @@
 
 .search-results-container {
   position: absolute;
-  margin: 30px 30px 0 40px;
-  width: 290px;
+  margin: 30px 30px 0 136px;
+  width: 210px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.175);
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+
 }
 
 .search-title {
@@ -18,7 +22,7 @@
 }
 .search-logo {
   color: slategrey;
-  margin: 6px 0 0 0;
+  margin: 6px 0 0 20px;
 }
 
 .shift {
@@ -38,7 +42,7 @@
 }
 
 .auto > input{
-  margin: 0 15px 0 90px;
+  margin: 0 15px 0 80px;
 }
 
 .search-button {
@@ -50,10 +54,10 @@
 .auto li{
   cursor: pointer;
   list-style-type: none;
-  padding: 5px 0 5px 0;
+  padding: 10px 0 10px 10px;
+  color: #333333;
   transition: background-color 0.2s ease;
   background: white;
-  margin-left: 120px;
   border: 1px solid rgba(0,0,0,0.15);
 }
 

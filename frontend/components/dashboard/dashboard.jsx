@@ -1,18 +1,20 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
-
-const address = "120 Bellevue St. Boston, MA 02132"
 
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.address;
+  }
+
+  componentWillReceiveProps(currentUser) {
+    console.log(this.props, "Will be mounted!");
+    this.props.getAddress(currentUser.location_id);
   }
 
   componentDidMount() {
-    console.log(address), "mounted!";
-    this.props.getAddress(address);
+    console.log(this.props, "mounted!");
+    this.props.getAddress(currentUser.location_id);
   }
   render() {
     return (
@@ -20,7 +22,23 @@ class Dashboard extends React.Component {
         <div className='dash-main'>
           <section className='sidebar'>
             <div className='sidebar-header'>
+              <div className='sidebar-item name'>{currentUser.username}</div>
+              <div className='sidebar-item location'>
+              <Link to={`/locations/${this.props.city.id}`}>{this.props.city.name}</Link>
+              </div>
             </div>
+            <div className="is-taking-guests">
+              Nick no take guest
+            </div>
+            <div className="is-taking-guests last">
+              Have Facebook friends? Tell them about this site!
+            </div>
+            <div className="is-taking-guests last">
+              <a href="http://facebook.com">
+                <img className="fblink" src="https://s3.amazonaws.com/movefast-sport-refuge/images/facebook-icon.png" />
+              </a>
+            </div>
+
           </section>
           <section className='main-content'></section>
         </div>

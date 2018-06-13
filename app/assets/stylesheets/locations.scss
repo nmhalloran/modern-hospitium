@@ -70,6 +70,12 @@
   margin: 10px 0;
 }
 
+.user-index-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
 .mod-testimonials {
   height: 1100px;
   width: 100%;
