@@ -14,6 +14,7 @@ class Location extends React.Component {
   componentWillMount() {
     console.log(this.props.match.params.id, "willMount")
     this.props.getCity(this.props.match.params.id)
+    // this.props.getEvents(this.props.match.params.id)
   }
 
 
@@ -21,12 +22,14 @@ class Location extends React.Component {
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.id !== newProps.match.params.id) {
       this.props.getCity(newProps.match.params.id);
+      // this.props.getEvents(newProps.match.params.id);
     }
   }
 
   componentDidMount() {
     console.log(this.props.match.params.id, "didMount")
     this.props.getCity(this.props.match.params.id);
+    this.props.getEvents(this.props.match.params.id);
   }
 
 

@@ -6,9 +6,9 @@ export const getCity = id => {
   })
 }
 
-export const getEvents = locationId => {
+export const getEvents = id => {
   return $.ajax({
     method: 'GET',
-    url: `/api/locations/${locationID}/events`
+    url: `/api/locations/${id}/events`
   })
 }

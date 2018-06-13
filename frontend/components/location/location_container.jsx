@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getCity } from '../../actions/location_actions';
+import { getCity, getEvents } from '../../actions/location_actions';
 import Location from './location';
 
 const mapStateToProps = (state, ownProps) => {
@@ -16,6 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     getCity: cityId => dispatch(getCity(cityId)),
+    getEvents: cityId => dispatch(getEvents(cityId))
   };
 };
 
