@@ -2,6 +2,9 @@ class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.save
+  end
+
+
   def show
     @event = Event.find(params[:id])
 
