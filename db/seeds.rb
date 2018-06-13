@@ -26,7 +26,7 @@ locations = Location.create([
 events = []
 
 0.upto(50) do |idx|
-  events.push(Event.create({name: "Meet Fellow Travlers", description: Faker::Lorem.paragraphs(2), date: Faker::Date.forward(150), location_id: (1 + rand(13))}))
+  events.push(Event.create({name: "Meet Fellow Travlers", description: Faker::Lorem.paragraph, date: Faker::Date.forward(150), location_id: (1 + rand(13))}))
 end
 
 users_url = ["https://randomuser.me/api/portraits/thumb/men/63.jpg",

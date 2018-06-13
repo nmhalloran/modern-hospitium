@@ -29,7 +29,6 @@ class Location extends React.Component {
   componentDidMount() {
     console.log(this.props.match.params.id, "didMount")
     this.props.getCity(this.props.match.params.id);
-    this.props.getEvents(this.props.match.params.id);
   }
 
 
@@ -95,7 +94,7 @@ class Location extends React.Component {
                 </div>
                 <div className='event-content'>
                   <ul className='event-index-container'>
-                    <EventsIndex  />
+                    <EventsIndex  events={this.props.city.events}/>
                   </ul>
                 </div>
               </section>
