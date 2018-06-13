@@ -14,10 +14,13 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     console.log(this.props, "mounted!");
+    const currentUser = currentUser || {location_id: ''}
     this.props.getAddress(currentUser.location_id);
   }
   render() {
+    const currentUser = currentUser || {username: ''}
     return (
+
       <div className='dash-body'>
         <div className='dash-main'>
           <section className='sidebar'>

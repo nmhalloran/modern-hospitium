@@ -35,6 +35,8 @@
     "lodash": "^4.17.10",
     "react": "^16.4.0",
     "react-addons-css-transition-group": "^15.6.2",
+    "react-date-picker": "^6.10.3",
+    "react-daterange-picker": "^2.0.1",
     "react-dom": "^16.4.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
