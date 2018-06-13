@@ -8,7 +8,7 @@
 require 'faker'
 
 locations = Location.create([
-  { name: "Boston", img_url: 'https://i.imgur.com/35FTluS.png'},
+  { name: "Boston", img_url: 'https://imgur.com/TYbwXiv.png'},
   {name: "San Francisco", img_url: "https://imgur.com/93mSUwz.png" },
   {name: "Miami", img_url: "https://imgur.com/akv5g6i.png"},
   {name: "Edinburgh", img_url: "https://imgur.com/sqon1fh.png" },

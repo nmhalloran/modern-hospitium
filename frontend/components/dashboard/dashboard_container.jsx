@@ -6,9 +6,9 @@ import Dashboard from './dashboard';
 
 const mapStateToProps = (state, ownProps) => {
   const defaultUser = { id: "", username: "", image_url: "", location_id: ""}
-  let currentUser = currentUser || defaultUser;
+  const currentUser = state.session.currentUser || defaultUser
   const defaultCity = { id: "", name: "", img_url: "", users: [] };
-  const city = state.entities.location[currentUser.location_id] || defaultCity;
+  const city = state.entities.location[state.session.currentUser.location_id] || defaultCity;
   return { city, currentUser }
 };
 

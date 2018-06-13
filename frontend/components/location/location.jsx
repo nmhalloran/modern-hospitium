@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import UsersIndex from '../user-index/user-index';
+import EventsIndex from '../event-index/event-index';
 
 
 class Location extends React.Component {
@@ -55,34 +56,46 @@ class Location extends React.Component {
           <div className='location-main'>
             <div className='location-container'>
               <section className='hosts-visitor'>
-               <div className='host-visitor-header'>
-                <h3>
-                  <i className="fas fa-home" ></i>
-                  &nbsp; &nbsp; Local Hosts
-                </h3>
-              </div>
-              <div className='host-visitor-content'>
-                <p className='host-visitor-counter'>{`Stay with one of ${this.props.city.users.length} hosts in ${this.props.city.name}`}</p>
-                <ul className='user-index-container'>
-                  <UsersIndex hosts={this.props.city.users} />
-                </ul>
-              </div>
+                 <div className='dashboard-subheaders'>
+                    <h3>
+                      <i className="fas fa-home" ></i>
+                      &nbsp; &nbsp; Local Hosts
+                    </h3>
+                </div>
+                <div className='host-visitor-content'>
+                  <p className='host-visitor-counter'>{`Stay with one of ${this.props.city.users.length} hosts in ${this.props.city.name}`}</p>
+                  <ul className='user-index-container'>
+                    <UsersIndex hosts={this.props.city.users} />
+                  </ul>
+                </div>
               </section>
               <section className='hosts-visitor'>
-                <div className='host-visitor-header'>
-                <h3>
-                  <i className="fas fa-plane" ></i>
-                  &nbsp; &nbsp; Upcoming Travelers
-                </h3>
+                <div className='dashboard-subheaders'>
+                  <h3>
+                    <i className="fas fa-plane" ></i>
+                    &nbsp; &nbsp; Upcoming Travelers
+                  </h3>
                 </div>
               </section>
               <section className='hosts-visitor-right'>
-                <div className='host-visitor-header'>
+                <div className='dashboard-subheaders'>
                 </div>
               </section>
             </div>
             <div className='events-container'>
-
+              <section className='event-table'>
+                <div className='dashboard-subheaders'>
+                  <h3>
+                    <i className="fas fa-calendar-alt" ></i>
+                    &nbsp; &nbsp; Upcoming Events
+                  </h3>
+                </div>
+                <div className='event-content'>
+                  <ul className='event-index-container'>
+                    <EventsIndex  />
+                  </ul>
+                </div>
+              </section>
             </div>
           </div>
         </div>

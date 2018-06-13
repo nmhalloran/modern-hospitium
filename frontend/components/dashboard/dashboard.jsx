@@ -7,18 +7,20 @@ class Dashboard extends React.Component {
     super(props);
   }
 
-  componentWillReceiveProps(currentUser) {
+  componentWillReceiveProps(newProps) {
     console.log(this.props, "Will be mounted!");
-    this.props.getAddress(currentUser.location_id);
+    if (this.props.currentUser.location_id !== newProps.currentUser.location_id) {
+      this.props.getAddress(newProps.currentUser.location_id);
+    }
   }
 
   componentDidMount() {
     console.log(this.props, "mounted!");
-    const currentUser = currentUser || {location_id: ''}
-    this.props.getAddress(currentUser.location_id);
+    this.props.getAddress(this.props.currentUser.location_id);
   }
   render() {
-    const currentUser = currentUser || {username: ''}
+    const { currentUser } = this.props
+
     return (
 
       <div className='dash-body'>
