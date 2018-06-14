@@ -1,6 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import {Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
+import 'react-dates/initialize';
 import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
@@ -10,6 +11,7 @@ import RootPage from './home_page/root_page';
 import Dashboard from './dashboard/dashboard';
 import SearchBar from './search/search_bar';
 import SignupFormContainer from './session_form/signup_form_container';
+import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const Names = [

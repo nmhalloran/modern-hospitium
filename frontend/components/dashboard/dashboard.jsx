@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
+import { SingleDatePicker, DateRangePicker } from 'react-dates';
 
 
 class Dashboard extends React.Component {
@@ -27,6 +28,7 @@ class Dashboard extends React.Component {
         <div className='dash-main'>
           <section className='sidebar'>
             <div className='sidebar-header'>
+      
               <div className='sidebar-item name'>{currentUser.username}</div>
               <div className='sidebar-item location'>
               <Link to={`/locations/${this.props.city.id}`}>{this.props.city.name}</Link>

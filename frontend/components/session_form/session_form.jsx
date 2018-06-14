@@ -7,10 +7,10 @@ class SessionForm extends React.Component {
     this.state = {
       username: '',
       password: '',
-      image_url: '',
+      image_url: 'https://imgur.com/IIqEyxg.png',
       location_id: ''
-
     };
+    debugger
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -26,6 +26,7 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     const user = Object.assign({}, this.state);
     this.props.processForm(user).then(this.props.closeModal)
   }
@@ -41,6 +42,7 @@ class SessionForm extends React.Component {
       </ul>
     );
   }
+
 
   render() {
     return (

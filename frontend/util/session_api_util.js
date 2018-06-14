@@ -14,20 +14,6 @@ export const signup = user => (
   })
 );
 
-const key = 'key=AIzaSyB9VfK4ttqwzUpghOYQgVY1Z8b4YqqFfh4';
-const address = 'Krakow, Poland';
-const parsedAddress = address.split(" ").join("+");
-const url = 'https://maps.googleapis.com/maps/api/geocode/json?address='
-const combinedUrl = url + parsedAddress + key;
-
-const geocode = location => {
-  return $.ajax({
-    method: 'GET',
-    url: combinedUrl
-  })
-};
-
-
 export const logout = () => (
   $.ajax({
     method: 'DELETE',

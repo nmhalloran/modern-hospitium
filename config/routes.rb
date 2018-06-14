@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :locations, only: [:create, :index, :show] do
       resources :events, only: [:create, :index, :show]
     end
+    resources :bookings, only: [:create, :index, :show]
   end
 
   root to: 'static_pages#root'

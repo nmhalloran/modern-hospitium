@@ -6,6 +6,11 @@ class User < ApplicationRecord
 
   # belongs_to :location
   has_many :reviews
+  has_many :bookings
+  has_many :guests,
+    primary_key: :id,
+    foreign_key: :id,
+    class_name: 'User'
 
   after_initialize :ensure_session_token
 

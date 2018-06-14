@@ -1,1 +1,10 @@
-
+// 
+// <DateRangePicker
+//   startDate={"2018-07-10"} // momentPropTypes.momentObj or null,
+//   startDateId="5" // PropTypes.string.isRequired,
+//   endDate={"2018-07-26"} // momentPropTypes.momentObj or null,
+//   endDateId="6" // PropTypes.string.isRequired,
+//   onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+//   focusedInput={"2018-08-26"} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+//   onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+// />

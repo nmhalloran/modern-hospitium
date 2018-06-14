@@ -8,16 +8,7 @@ class Location extends React.Component {
   constructor(props) {
     console.log("When does this happen?")
     super(props);
-    this.props.getCity(this.props.match.params.id);
   }
-
-  componentWillMount() {
-    console.log(this.props.match.params.id, "willMount")
-    this.props.getCity(this.props.match.params.id)
-    // this.props.getEvents(this.props.match.params.id)
-  }
-
-
 
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.id !== newProps.match.params.id) {
@@ -27,7 +18,6 @@ class Location extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.id, "didMount")
     this.props.getCity(this.props.match.params.id);
   }
 

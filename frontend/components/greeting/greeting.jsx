@@ -2,7 +2,8 @@ import React from 'react';
 
 
 
-const Greeting = ({ currentUser, logout, demoLogin, openModal }) => {
+
+const Greeting = ({ currentUser, logout, demoLogin, openModal, history }) => {
   const sessionLinks = () => (
     <nav className="login-signup">
       <button className='login' onClick={() => demoLogin()}>Demo Login!</button>
@@ -23,9 +24,10 @@ const Greeting = ({ currentUser, logout, demoLogin, openModal }) => {
       </button>
 
       <ul id="myDropdown" className='header-notifications'>
+        <button className='header-notification-items' onClick={
+          () => history.push(`/dashboard`)
+        }>My Dashboard</button>
         <button className='header-notification-items' onClick={logout}>Log Out</button>
-        <button className='header-notification-items' onClick={logout}>Profile</button>
-        <button className='header-notification-items' onClick={logout}>Profile</button>
       </ul>
     </hgroup>
   );

@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 import { login, logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
@@ -15,7 +16,7 @@ const mapDispatchToProps = dispatch => ({
   demoLogin: demo => dispatch(login({username: "nick", password: "123456"}))
 });
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Greeting);
+)(Greeting));

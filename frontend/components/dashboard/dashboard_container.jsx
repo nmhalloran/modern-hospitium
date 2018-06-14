@@ -5,7 +5,7 @@ import { getCity } from '../../actions/location_actions';
 import Dashboard from './dashboard';
 
 const mapStateToProps = (state, ownProps) => {
-  const defaultUser = { id: "", username: "", image_url: "", location_id: ""}
+  const defaultUser = { id: "", username: "", image_url: "", location_id: 1}
   const currentUser = state.session.currentUser || defaultUser
   const defaultCity = { id: "", name: "", img_url: "", users: [] };
   const city = state.entities.location[state.session.currentUser.location_id] || defaultCity;
