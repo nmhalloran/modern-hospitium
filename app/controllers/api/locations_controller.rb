@@ -5,6 +5,9 @@ class Api::LocationsController < ApplicationController
   end
 
   def show
+    # if (!params[:id]) {
+    #   params[:id] = 1
+    # }
     @location = Location.find(params[:id])
 
   end

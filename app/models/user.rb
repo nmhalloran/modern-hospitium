@@ -4,12 +4,16 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  # belongs_to :location
   has_many :reviews
-  has_many :bookings
-  has_many :guests,
-    through: :bookings,
-    source: :guest
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :guest_id,
+    class_name: 'Booking'
+
+  has_many :guest_trips_booked,
+    primary_key: :id,
+    foreign_key: :host_id,
+    class_name: 'Booking'
 
 
   after_initialize :ensure_session_token

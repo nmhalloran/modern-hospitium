@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
   // console.log("mstp", state);
   // console.log("mstp", ownProps);
   const defaultUsers = [];
-  const defaultCity = { id: "", name: "", img_url: "", users: [], events: [] };
+  const defaultCity = { id: "", name: "", img_url: "", hosts: [], visitors: [], bookings: [], events: [] };
   const city = state.entities.location[ownProps.match.params.id] || defaultCity;
   return { city };
 };

@@ -1,6 +1,6 @@
 export const makeBooking = booking => (
   $.ajax({
-    method: 'POST'
+    method: 'POST',
     url: 'api/bookings',
     data: { booking }
   })

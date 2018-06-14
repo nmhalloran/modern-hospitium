@@ -13,11 +13,12 @@ class Location extends React.Component {
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.id !== newProps.match.params.id) {
       this.props.getCity(newProps.match.params.id);
-      // this.props.getEvents(newProps.match.params.id);
+      this.props.getEvents(newProps.match.params.id);
     }
   }
 
   componentDidMount() {
+    console.log(this.props.match.params.id, "mounted");
     this.props.getCity(this.props.match.params.id);
   }
 
@@ -55,9 +56,9 @@ class Location extends React.Component {
                     </h3>
                 </div>
                 <div className='host-visitor-content'>
-                  <p className='host-visitor-counter'>{`Stay with one of ${this.props.city.users.length} hosts in ${this.props.city.name}`}</p>
+                  <p className='host-visitor-counter'>{`Stay with one of ${this.props.city.hosts.length} hosts in ${this.props.city.name}`}</p>
                   <ul className='user-index-container'>
-                    <UsersIndex hosts={this.props.city.users} />
+                    <UsersIndex hosts={this.props.city.hosts} />
                   </ul>
                 </div>
               </section>
@@ -67,6 +68,12 @@ class Location extends React.Component {
                     <i className="fas fa-plane" ></i>
                     &nbsp; &nbsp; Upcoming Travelers
                   </h3>
+                </div>
+                <div className='host-visitor-content'>
+                  <p className='host-visitor-counter'>{`Stay with one of ${this.props.city.visitors.length} hosts in ${this.props.city.name}`}</p>
+                  <ul className='user-index-container'>
+                    <UsersIndex hosts={this.props.city.visitors} />
+                  </ul>
                 </div>
               </section>
               <section className='hosts-visitor-right'>
