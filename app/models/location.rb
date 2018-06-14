@@ -5,7 +5,7 @@ class Location < ApplicationRecord
 
   has_many :visitors,
     primary_key: :id,
-    foreign_key: :user_id,
+    foreign_key: :location_id,
     class_name: 'User'
 
   has_many :events
