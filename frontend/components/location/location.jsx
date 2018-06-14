@@ -2,12 +2,11 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import UsersIndex from '../user-index/user-index';
 import EventsIndex from '../event-index/event-index';
-import BookingForm from '../booking/booking_form';
+import BookingFormContainer from '../booking/booking_container';
 
 
 class Location extends React.Component {
   constructor(props) {
-    console.log("When does this happen?")
     super(props);
   }
 
@@ -19,12 +18,12 @@ class Location extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.props.match.params.id, "mounted");
     this.props.getCity(this.props.match.params.id);
   }
 
 
   render(newProps) {
+    let a
 
     var topPicStyle = {
       display: 'flex',
@@ -36,8 +35,6 @@ class Location extends React.Component {
       backgroundSize: "cover"
     };
       const city = this.props.city;
-      console.log(city, "Inside bool");
-      debugger
     return (
       <div>
         <section style={topPicStyle}>
@@ -46,10 +43,10 @@ class Location extends React.Component {
             {this.props.city.name.toUpperCase()}
           </h3>
         </div>
-        <div>
-          <BookingForm location_id={this.props.city.id} guest_id={this.props.currentUser.id} />
-        </div>
         </section>
+        <div>
+        <BookingFormContainer location_id={this.props.city.id} guest_id={this.props.currentUser.id} />
+        </div>
         <div className='dash-body'>
           <div className='location-main'>
             <div className='location-container'>

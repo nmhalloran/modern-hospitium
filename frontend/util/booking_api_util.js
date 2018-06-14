@@ -6,7 +6,7 @@ export const makeBooking = booking => (
   })
 )
 
-export const getBookings = id => (
+export const getBooking = id => (
   $.ajax({
     method: 'GET',
     url: `api/users/${id}/bookings`

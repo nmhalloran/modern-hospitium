@@ -1,7 +1,12 @@
-import { combineReducers } from 'redux';
+import { SHOW_BOOKING, HIDE_BOOKING } from '../actions/ui_actions';
 
-import modal from './modal_reducer';
-
-export default combineReducers({
-  modal
-});
+export default function bookingReducer(state = false, action) {
+  switch (action.type) {
+    case SHOW_BOOKING:
+      return true;
+    case HIDE_BOOKING:
+      return false;
+    default:
+      return state;
+  }
+}

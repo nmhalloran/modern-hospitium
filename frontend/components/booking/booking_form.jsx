@@ -11,11 +11,17 @@ class BookingForm extends React.Component {
       host_id: '1',
       guest_id: props.guest_id
     };
-    debugger
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.match.params.id !== this.props.match.params.id) {
+      this.setState({ location_id: newProps.match.params.id })
+    }
+  }
+
   componentDidMount() {
+    console.log(this.props.match.params.id, "mounted");
   }
 
   update(field) {
@@ -27,8 +33,7 @@ class BookingForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const booking = Object.assign({}, this.state);
-    this.props.getBooking(booking).then(() => 
-    document.getElementById("myDropdown").classList.toggle("show");
+    this.props.bookTrip(booking).then(() => document.getElementById("myInsert").classList.toggle("show"));
   }
 
   renderErrors() {
@@ -46,7 +51,7 @@ class BookingForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
+      <div id="myInsert" className="login-form-container">
       <div className='login-form-header'>
         <p>Book your trip here honky!</p>
       </div>

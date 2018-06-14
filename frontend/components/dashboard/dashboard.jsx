@@ -28,7 +28,7 @@ class Dashboard extends React.Component {
         <div className='dash-main'>
           <section className='sidebar'>
             <div className='sidebar-header'>
-      
+
               <div className='sidebar-item name'>{currentUser.username}</div>
               <div className='sidebar-item location'>
               <Link to={`/locations/${this.props.city.id}`}>{this.props.city.name}</Link>
@@ -47,7 +47,27 @@ class Dashboard extends React.Component {
             </div>
 
           </section>
-          <section className='main-content'></section>
+          <section className='main-content'>
+            <div className='main-content-header'>
+
+              <div className='main-content-item name'>
+                <i className="fas fa-couch"></i>
+                &nbsp; &nbsp; EXPLORE ONE OF OUR SELECTED CITIES...
+              </div>
+
+            </div>
+            <div className="is-taking-guests">
+              Nick no take guest
+            </div>
+            <div className="is-taking-guests last">
+              Have Facebook friends? Tell them about this site!
+            </div>
+            <div className="is-taking-guests last">
+              <a href="http://facebook.com">
+                <img className="fblink" src="https://s3.amazonaws.com/movefast-sport-refuge/images/facebook-icon.png" />
+              </a>
+            </div>
+          </section>
         </div>
       </div>
     );

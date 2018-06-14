@@ -1,7 +1,7 @@
 import * as BookingAPIUtil from '../util/booking_api_util';
 
 
-export const RECEIVE_BOOKING = 'RECEIVE_BOOKING_INFO';
+export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 
 export const receiveBooking = booking => {
   return {
@@ -11,7 +11,7 @@ export const receiveBooking = booking => {
 }
 
 export const makeBooking = booking => dispatch => (
-  BookingAPIUtil.getBooking(booking).then(booking => (
-    dispatch(receiveBookint(booking))
+  BookingAPIUtil.makeBooking(booking).then(booking => (
+    dispatch(receiveBooking(booking))
   ))
 );
