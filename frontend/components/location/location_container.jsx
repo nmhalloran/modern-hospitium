@@ -5,12 +5,11 @@ import { getCity, getEvents } from '../../actions/location_actions';
 import Location from './location';
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log("mstp", state);
-  // console.log("mstp", ownProps);
-  const defaultUsers = [];
+  const defaultUser = { id: "", username: "", image_url: "", location_id: 1}
+  const currentUser = state.session.currentUser || defaultUser
   const defaultCity = { id: "", name: "", img_url: "", hosts: [], visitors: [], bookings: [], events: [] };
   const city = state.entities.location[ownProps.match.params.id] || defaultCity;
-  return { city };
+  return { city, currentUser };
 };
 
 const mapDispatchToProps = dispatch => {

@@ -7,16 +7,15 @@ class BookingForm extends React.Component {
     this.state = {
       start_date: '',
       end_date: '',
-      location_id: '',
-      host_id: '',
-      guest_id: ''
+      location_id: props.match.params.id,
+      host_id: '1',
+      guest_id: props.guest_id
     };
     debugger
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
-    this.props.clearErrors();
   }
 
   update(field) {
@@ -27,9 +26,9 @@ class BookingForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal)
+    const booking = Object.assign({}, this.state);
+    this.props.getBooking(booking).then(() => 
+    document.getElementById("myDropdown").classList.toggle("show");
   }
 
   renderErrors() {
@@ -53,35 +52,30 @@ class BookingForm extends React.Component {
       </div>
       <br/>
         <form onSubmit={this.handleSubmit} className="login-form-box">
-        <p className="errors">{this.renderErrors()}</p>
           <div className="login-form">
             <br/>
             <label>
-              <input className="type-indent" type="text"
-                value={this.state.username}
-                onChange={this.update('username') }
-                placeholder="Username"
+              <input className="type-indent" type="date"
+                value={this.state.start_date}
+                onChange={this.update('start_date') }
                 className="login-input"
               />
             </label>
             <br/>
             <label>
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                placeholder="Password"
+              <input type="date"
+                value={this.state.end_date}
+                onChange={this.update('end_date')}
                 className="login-input"
               />
             </label>
             <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="session-submit" type="submit" value="Make Request" />
           </div>
-         <p>{this.props.question}</p>
-          {this.props.otherForm}
         </form>
       </div>
     );
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(BookingForm);

@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import UsersIndex from '../user-index/user-index';
 import EventsIndex from '../event-index/event-index';
+import BookingForm from '../booking/booking_form';
 
 
 class Location extends React.Component {
@@ -36,6 +37,7 @@ class Location extends React.Component {
     };
       const city = this.props.city;
       console.log(city, "Inside bool");
+      debugger
     return (
       <div>
         <section style={topPicStyle}>
@@ -43,6 +45,9 @@ class Location extends React.Component {
           <h3 className="city-name">
             {this.props.city.name.toUpperCase()}
           </h3>
+        </div>
+        <div>
+          <BookingForm location_id={this.props.city.id} guest_id={this.props.currentUser.id} />
         </div>
         </section>
         <div className='dash-body'>
