@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  console.log(window.currentUser);
   //TESTING START
   window.login = login;
   window.signup = signup;

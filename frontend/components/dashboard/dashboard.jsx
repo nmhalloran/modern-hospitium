@@ -12,20 +12,17 @@ class Dashboard extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    console.log(this.props, "Will be mounted!");
     if (this.props.currentUser.location_id !== newProps.currentUser.location_id) {
       this.props.getCities();
     }
   }
 
   componentDidMount() {
-    console.log(this.props, "mounted!");
     this.props.getCities();
   }
   render() {
     const { currentUser } = this.props
     const citypics = this.props.cities ? <SampleLocaleIndex cities={this.props.cities} /> : <div></div>
-    console.log(this.props.cities, "WHAT?!");
     return (
 
       <div className='dash-body'>

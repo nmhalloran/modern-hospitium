@@ -11,7 +11,6 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    console.log(address), "mounted!";
     this.props.getAddress(address);
   }
   render() {
