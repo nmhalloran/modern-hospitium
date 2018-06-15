@@ -197,6 +197,3 @@ users_url = ["https://randomuser.me/api/portraits/men/63.jpg",
 0.upto(150) do |idx|
   users.push(User.create({username: Faker::Internet.user_name(6..9), password: "123456", image_url: users_url[idx], location_id: (1 + rand(13))}))
 end
-
-
-User.create({username: 'NiartenyaW', password: "sweetawesome", image_url: 'https://avatars2.githubusercontent.com/u/8084693?s=400&v=4'})
