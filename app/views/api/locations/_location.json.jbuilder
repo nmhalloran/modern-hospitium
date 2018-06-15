@@ -1,5 +1,4 @@
-json.extract! location, :id, :name, :img_url, :events
-
+json.extract! location, :id, :name, :img_url, :events, :bookings, :events
 
 json.hosts do
   json.array! location.hosts do |host|

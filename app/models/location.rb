@@ -7,6 +7,11 @@ class Location < ApplicationRecord
     class_name: 'User'
 
   has_many :bookings
+  
+  has_many :visitors,
+    through: :bookings,
+    source: :guest
+
 
   has_many :events
 
