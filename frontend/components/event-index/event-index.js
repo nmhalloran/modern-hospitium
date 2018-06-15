@@ -14,6 +14,7 @@ class EventsIndex extends React.Component {
               <p className="event-descriptor">{event.description}</p>
             </div>
           </li>
+          
         )
       }
     });
