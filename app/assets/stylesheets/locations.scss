@@ -118,8 +118,14 @@
 }
 .hosts-visitor-right {
   display: grid;
-  margin-top: 10px;
+  grid-gap: 10px;
+  grid-template-rows: 60px 430px;
+  grid-template-areas:
+  "header"
+  "content";
   background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 33%;
   height: 500px;
   box-sizing: border-box;

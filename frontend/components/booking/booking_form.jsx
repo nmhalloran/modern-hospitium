@@ -8,7 +8,7 @@ class BookingForm extends React.Component {
       start_date: '',
       end_date: '',
       location_id: props.match.params.id,
-      host_id: '1',
+      host_id: '',
       guest_id: props.guest_id
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -51,12 +51,8 @@ class BookingForm extends React.Component {
 
   render() {
     return (
-      <div id="myInsert" className="login-form-container">
-      <div className='login-form-header'>
-        <p>Book your trip here honky!</p>
-      </div>
-      <br/>
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+      <div id="myInsert" className="booking-form-container">
+        <form onSubmit={this.handleSubmit} className="booking-form-box">
           <div className="login-form">
             <br/>
             <label>

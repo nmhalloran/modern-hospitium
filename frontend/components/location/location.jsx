@@ -23,7 +23,6 @@ class Location extends React.Component {
 
 
   render(newProps) {
-    let a
 
     var topPicStyle = {
       display: 'flex',
@@ -34,7 +33,7 @@ class Location extends React.Component {
       backgroundPosition: "center center",
       backgroundSize: "cover"
     };
-      const city = this.props.city;
+
     return (
       <div>
         <section style={topPicStyle}>
@@ -44,9 +43,6 @@ class Location extends React.Component {
           </h3>
         </div>
         </section>
-        <div>
-        <BookingFormContainer location_id={this.props.city.id} guest_id={this.props.currentUser.id} />
-        </div>
         <div className='dash-body'>
           <div className='location-main'>
             <div className='location-container'>
@@ -80,6 +76,11 @@ class Location extends React.Component {
               </section>
               <section className='hosts-visitor-right'>
                 <div className='dashboard-subheaders'>
+                  <h3> Book a Trip! </h3>
+                </div>
+                <div className="host-visitor-content">
+                  
+                    <BookingFormContainer hosts = {this.props.city.hosts} location_id={this.props.city.id} guest_id={this.props.currentUser.id} />
                 </div>
               </section>
             </div>

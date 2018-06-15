@@ -10,7 +10,6 @@ const locationReducer = (state = {}, action) => {
     case RECEIVE_CITY_INFO:
       return merge( {}, state, { [action.city.id]: action.city });
     case RECEIVE_BOOKING:
-      debugger
       return merge({}, state, action.booking.location);
 
       // return merge( {}, state, state[action.booking.location_id].booking, { [action.booking.id]: action.booking } );
