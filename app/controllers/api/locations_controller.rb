@@ -1,13 +1,15 @@
 class Api::LocationsController < ApplicationController
+
+  def index
+    @locations = Location.limit(3).order("RANDOM()")
+  end
+
   def create
     @location = Location.new(location_params)
     @location.save
   end
 
   def show
-    # if (!params[:id]) {
-    #   params[:id] = 1
-    # }
     @location = Location.find(params[:id])
 
   end

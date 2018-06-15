@@ -16,6 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   return {
     getCity: cityId => dispatch(getCity(cityId)),
+    getCities: () => dispatch(getCities()),
     getEvents: cityId => dispatch(getEvents(cityId))
   };
 };

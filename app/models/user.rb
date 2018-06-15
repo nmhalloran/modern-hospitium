@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  belongs_to :location
+  
   has_many :reviews
   has_many :bookings,
     primary_key: :id,

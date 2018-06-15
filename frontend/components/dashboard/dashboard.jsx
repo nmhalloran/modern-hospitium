@@ -1,4 +1,5 @@
 import React from 'react';
+import SampleLocaleIndex from './sample_locale_index';
 import { withRouter, Link } from 'react-router-dom';
 import { SingleDatePicker, DateRangePicker } from 'react-dates';
 
@@ -11,31 +12,30 @@ class Dashboard extends React.Component {
   componentWillReceiveProps(newProps) {
     console.log(this.props, "Will be mounted!");
     if (this.props.currentUser.location_id !== newProps.currentUser.location_id) {
-      this.props.getAddress(newProps.currentUser.location_id);
+      this.props.getCities();
     }
   }
 
   componentDidMount() {
     console.log(this.props, "mounted!");
-    this.props.getAddress(this.props.currentUser.location_id);
+    this.props.getCities();
   }
   render() {
     const { currentUser } = this.props
-
+    const citypics = this.props.cities ? <SampleLocaleIndex cities={this.props.cities} /> : <div></div>
+    console.log(this.props.cities, "WHAT?!");
     return (
 
       <div className='dash-body'>
         <div className='dash-main'>
           <section className='sidebar'>
             <div className='sidebar-header'>
-
               <div className='sidebar-item name'>{currentUser.username}</div>
               <div className='sidebar-item location'>
-              <Link to={`/locations/${this.props.city.id}`}>{this.props.city.name}</Link>
+              <Link to={`/locations/${currentUser.location_id}`}>{currentUser.hometown}</Link>
               </div>
             </div>
             <div className="is-taking-guests">
-              Nick no take guest
             </div>
             <div className="is-taking-guests last">
               Have Facebook friends? Tell them about this site!
@@ -57,7 +57,7 @@ class Dashboard extends React.Component {
 
             </div>
             <div className="is-taking-guests">
-              Nick no take guest
+              {citypics}
             </div>
             <div className="is-taking-guests last">
               Have Facebook friends? Tell them about this site!

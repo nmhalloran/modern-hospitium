@@ -6,6 +6,13 @@ export const getCity = id => {
   })
 }
 
+export const getCities = () => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/locations`
+  })
+}
+
 export const getEvents = id => {
   return $.ajax({
     method: 'GET',

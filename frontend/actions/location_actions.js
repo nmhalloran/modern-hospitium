@@ -2,15 +2,15 @@ import * as SessionAPIUtil from '../util/session_api_util';
 import * as LocationAPIUtil from '../util/location_api_util';
 
 
-export const RECEIVE_ADDRESS_INFO = 'RECEIVE_ADDRESS_INFO';
+export const RECEIVE_CITIES_INFO = 'RECEIVE_CITIES_INFO';
 export const RECEIVE_CITY_INFO = 'RECEIVE_CITY_INFO';
 export const RECEIVE_EVENTS = 'RECEIVE_EVENTS';
 export const RECEIVE_EVENT = 'RECEIVE_EVENT';
 
-export const receiveAddressInfo = address => {
+export const receiveCitiesInfo = cities => {
   return {
-    type: RECEIVE_ADDRESS_INFO,
-    address
+    type: RECEIVE_CITIES_INFO,
+    cities
   }
 }
 
@@ -53,8 +53,8 @@ export const getCity = id => dispatch => (
   ))
 );
 
-export const geocode = address => dispatch => (
-  SessionAPIUtil.geocode(address).then((address) => (
-    dispatch(receiveAddressInfo(address))
+export const getCities = cities => dispatch => (
+  LocationAPIUtil.getCities(cities).then((cities) => (
+    dispatch(receiveCitiesInfo(cities))
   ))
 );
