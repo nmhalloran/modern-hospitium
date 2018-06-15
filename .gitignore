@@ -13,7 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 
-
+/public
 /node_modules
 /app/assets/javascripts/bundle.js
 /app/assets/javascripts/bundle.js.map
