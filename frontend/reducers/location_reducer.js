@@ -5,7 +5,6 @@ import merge from 'lodash/merge';
 const _nullUser = Object.freeze({ id: null });
 
 const locationReducer = (state = {}, action) => {
-  debugger
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CITY_INFO:

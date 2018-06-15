@@ -3,7 +3,6 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
 
     @booking.host_id = User.where(location_id: params['booking']['location_id']).sample.id
-    debugger
     if @booking.save
       @location = Location.find(@booking.location_id)
       render "api/bookings/show"

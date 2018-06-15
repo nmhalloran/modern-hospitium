@@ -1,5 +1,7 @@
 import React from 'react';
 import SampleLocaleIndex from './sample_locale_index';
+import SearchBar from '../search/search_bar';
+import { Names } from '../app';
 import { withRouter, Link } from 'react-router-dom';
 import { SingleDatePicker, DateRangePicker } from 'react-dates';
 
@@ -36,6 +38,7 @@ class Dashboard extends React.Component {
               </div>
             </div>
             <div className="is-taking-guests">
+             Looking forward to meetups!
             </div>
             <div className="is-taking-guests last">
               Have Facebook friends? Tell them about this site!
@@ -49,6 +52,28 @@ class Dashboard extends React.Component {
           </section>
           <section className='main-content'>
             <div className='main-content-header'>
+              <div className='main-content-item name'>
+                <i className="fas fa-plane"></i>
+                &nbsp; &nbsp; MY TRAVEL PLANS
+              </div>
+            </div>
+            <div className="dashboard-info">
+              You have no upcoming trips
+            </div>
+            <div className='main-content-footer'>
+            </div>
+            <div className='main-content-header main-content-lower'>
+              <div className='main-content-item name'>
+                <i className="fas fa-home"></i>
+                &nbsp; &nbsp; MY UPCOMING GUESTS
+              </div>
+            </div>
+            <div className="dashboard-info">
+              You have no upcoming guests
+            </div>
+            <div className='main-content-footer'>
+            </div>
+            <div className='main-content-header main-content-lower'>
 
               <div className='main-content-item name'>
                 <i className="fas fa-couch"></i>
@@ -56,16 +81,13 @@ class Dashboard extends React.Component {
               </div>
 
             </div>
-            <div className="is-taking-guests">
+            <div className="sample-cities-container">
               {citypics}
             </div>
-            <div className="is-taking-guests last">
-              Have Facebook friends? Tell them about this site!
-            </div>
-            <div className="is-taking-guests last">
-              <a href="http://facebook.com">
-                <img className="fblink" src="https://s3.amazonaws.com/movefast-sport-refuge/images/facebook-icon.png" />
-              </a>
+            <div className='sub-search-header'>
+              <div className="search-bar-container">
+                <SearchBar names={Names} />
+              </div>
             </div>
           </section>
         </div>

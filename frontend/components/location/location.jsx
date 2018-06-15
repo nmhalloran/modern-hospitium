@@ -34,6 +34,7 @@ class Location extends React.Component {
       backgroundSize: "cover"
     };
 
+
     return (
       <div>
         <section style={topPicStyle}>
@@ -79,7 +80,7 @@ class Location extends React.Component {
                   <h3> Book a Trip! </h3>
                 </div>
                 <div className="host-visitor-content">
-                  
+
                     <BookingFormContainer hosts = {this.props.city.hosts} location_id={this.props.city.id} guest_id={this.props.currentUser.id} />
                 </div>
               </section>

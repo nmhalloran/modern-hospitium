@@ -173,10 +173,38 @@
 .event-item {
   padding: 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 20px;
   width: 90%;
   height: 220px;
-  border: 1px solid slategrey;
+  border: 1px solid lightgrey;
+}
+
+.event-info-container {
+  width: 350px;
+  overflow: auto;
+}
+
+.event-descriptor {
+  color: slategrey;
+  text-align: left;
+  overflow: auto;
+}
+
+.event-pic {
+  width: 130px;
+  height: 147px;
+  object-fit: cover;
+  border-radius: 2px;
+  opacity: 0.8;
+  box-shadow: 2px 2px 2px slategrey;
+}
+
+.event-date-info {
+  margin: 10px;
+  font-size: 16px;
 }
 
 //USES DASH-MAIN and DASH-BODY for formatting

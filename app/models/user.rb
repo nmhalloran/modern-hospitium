@@ -5,7 +5,7 @@ class User < ApplicationRecord
   attr_reader :password
 
   belongs_to :location
-  
+
   has_many :reviews
   has_many :bookings,
     primary_key: :id,
@@ -16,6 +16,9 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :host_id,
     class_name: 'Booking'
+
+  has_many :guests,
+    through: :guest_trips_booked
 
 
   after_initialize :ensure_session_token

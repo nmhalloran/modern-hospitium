@@ -14,7 +14,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
-const Names = [
+export const Names = [
   "",
   "Boston",
   "San Francisco",
@@ -50,6 +50,7 @@ const App = () => (
     </Switch>
     <footer>
       <div className="footer-container">
+        ©2018 Hospitium International, Inc.
       </div>
     </footer>
   </div>

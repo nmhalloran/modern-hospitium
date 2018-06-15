@@ -8,7 +8,6 @@ const mapStateToProps = (state, ownProps) => {
   const defaultUser = { id: "", username: "", image_url: "", location_id: 1}
   const currentUser = state.session.currentUser || defaultUser
   const cities = state.entities.location
-  debugger
   return { cities, currentUser }
 };
 

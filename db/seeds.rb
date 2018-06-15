@@ -25,9 +25,19 @@ locations = Location.create([
 
 events = []
 
-0.upto(50) do |idx|
-  events.push(Event.create({name: "Meet Fellow Travlers", description: Faker::Lorem.paragraph, date: Faker::Date.forward(150), location_id: (1 + rand(13))}))
+1.upto(12) do |idx|
+  events.push(Event.create({name: "#{Location.find(idx).name} Coffee Meetup", description: "In #{Location.find(idx).name}? Meet locals and other believers in divine guest rites at a local coffee shop! Every Tuesday at 9am, there is an informal meetup of like minded individuals. Let's get caffeinated and talk about traveling!", date: "Every Wednesday at 9:00AM", location_id: idx, img_url: "https://imgur.com/GXFuukn.jpg"}))
 end
+
+1.upto(12) do |idx|
+  events.push(Event.create({name: "#{Location.find(idx).name} Hike", description: "The walls of #{Location.find(idx).name} closing in a bit? Spend the day hiking through one of the many trails surrounding this great city. Group leaves fro in front of city hall at 8am sharp!", date: "Saturday mornings at 8:00AM", location_id: idx, img_url: "https://imgur.com/LsgfQs4.jpg"}))
+end
+
+1.upto(12) do |idx|
+  events.push(Event.create({name: "#{Location.find(idx).name} Beer Crawl", description: "It's thirsty Thursday! Check out the scene with our #{Location.find(idx).name} beer crawl! Meet up with locals and other travelers and paint the town red! Group starts at that really famous old bar in the heart of downtown. at 7pm. Remember to drink responsibly!", date: "Thursdays at 7:00PM", location_id: idx, img_url: "https://imgur.com/DbNEaCg.jpg"}))
+end
+
+
 
 users_url = ["https://randomuser.me/api/portraits/men/63.jpg",
 "https://randomuser.me/api/portraits/men/42.jpg",

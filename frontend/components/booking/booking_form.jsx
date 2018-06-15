@@ -50,6 +50,8 @@ class BookingForm extends React.Component {
 
 
   render() {
+
+
     return (
       <div id="myInsert" className="booking-form-container">
         <form onSubmit={this.handleSubmit} className="booking-form-box">
@@ -71,6 +73,7 @@ class BookingForm extends React.Component {
               />
             </label>
             <br/>
+
             <input className="session-submit" type="submit" value="Make Request" />
           </div>
         </form>
