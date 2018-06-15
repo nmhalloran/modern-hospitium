@@ -3,7 +3,6 @@ import SampleLocaleIndex from './sample_locale_index';
 import SearchBar from '../search/search_bar';
 import { Names } from '../app';
 import { withRouter, Link } from 'react-router-dom';
-import { SingleDatePicker, DateRangePicker } from 'react-dates';
 
 
 class Dashboard extends React.Component {

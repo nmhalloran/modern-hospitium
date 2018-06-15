@@ -11,7 +11,6 @@ import RootPage from './home_page/root_page';
 import Dashboard from './dashboard/dashboard';
 import SearchBar from './search/search_bar';
 import SignupFormContainer from './session_form/signup_form_container';
-import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 export const Names = [
