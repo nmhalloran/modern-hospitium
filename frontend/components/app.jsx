@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import {Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
-import 'react-dates/initialize';
 import Modal from './modal/modal';
 import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';

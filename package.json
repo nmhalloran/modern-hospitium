@@ -36,7 +36,6 @@
     "lodash": "^4.17.10",
     "react": "^16.4.0",
     "react-addons-css-transition-group": "^15.6.2",
-    "react-dates": "^16.7.0",
     "react-dom": "^16.4.0",
     "react-moment-proptypes": "^1.6.0",
     "react-redux": "^5.0.7",
