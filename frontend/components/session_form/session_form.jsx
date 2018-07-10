@@ -8,7 +8,7 @@ class SessionForm extends React.Component {
       username: '',
       password: '',
       image_url: 'https://imgur.com/IIqEyxg.png',
-      location_id: ''
+      location_id: 10
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
