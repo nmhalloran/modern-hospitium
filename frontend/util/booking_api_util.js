@@ -1,14 +1,12 @@
-export const makeBooking = booking => (
+export const makeBooking = booking =>
   $.ajax({
-    method: 'POST',
-    url: 'api/bookings',
+    method: "POST",
+    url: "api/bookings",
     data: { booking }
-  })
-)
+  });
 
-export const getBooking = id => (
+export const getBooking = id =>
   $.ajax({
-    method: 'GET',
+    method: "GET",
     url: `api/users/${id}/bookings`
-  })
-)
+  });
