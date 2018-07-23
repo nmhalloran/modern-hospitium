@@ -1,5 +1,6 @@
 import React from 'react';
 import SampleLocaleIndex from './sample_locale_index';
+import MyTripsIndex from './my_trips_index';
 import SearchBar from '../search/search_bar';
 import { Names } from '../app';
 import { withRouter, Link } from 'react-router-dom';
@@ -13,15 +14,19 @@ class Dashboard extends React.Component {
   componentWillReceiveProps(newProps) {
     if (this.props.currentUser.location_id !== newProps.currentUser.location_id) {
       this.props.getCities();
+      this.props.getBookings(this.props.currentUser.id);
     }
   }
 
   componentDidMount() {
     this.props.getCities();
+    this.props.getBookings(this.props.currentUser.id);
   }
+
   render() {
     const { currentUser } = this.props
     const citypics = this.props.cities ? <SampleLocaleIndex cities={this.props.cities} /> : <div></div>
+    debugger
     return (
 
       <div className='dash-body'>
@@ -54,6 +59,11 @@ class Dashboard extends React.Component {
               </div>
             </div>
             <div className="dashboard-info">
+            <ul>
+            <ul>
+              <MyTripsIndex bookings={this.props.currentUser.bookings} />
+            </ul>
+            </ul>
               You have no upcoming trips
             </div>
             <div className='main-content-footer'>

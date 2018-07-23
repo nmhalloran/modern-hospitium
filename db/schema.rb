@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20180614034314) do
     t.date "start_date", null: false
     t.date "end_date", null: false
     t.integer "location_id", null: false
+    t.string "location_name", null: false
     t.integer "guest_id", null: false
     t.integer "host_id", null: false
   end

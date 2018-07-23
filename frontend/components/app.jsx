@@ -35,7 +35,7 @@ const App = () => (
     <Modal />
     <header>
       <div className="header-wrapper">
-        <h1 className='logo'>hospitium</h1>
+        <a href="/"><h1 className='logo'>hospitium</h1></a>
         <SearchBar names={Names} />
         <GreetingContainer />
       </div>
