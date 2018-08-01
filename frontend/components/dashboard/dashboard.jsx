@@ -26,7 +26,6 @@ class Dashboard extends React.Component {
   render() {
     const { currentUser } = this.props
     const citypics = this.props.cities ? <SampleLocaleIndex cities={this.props.cities} /> : <div></div>
-    debugger
     return (
 
       <div className='dash-body'>
@@ -64,7 +63,6 @@ class Dashboard extends React.Component {
               <MyTripsIndex bookings={this.props.currentUser.bookings} />
             </ul>
             </ul>
-              You have no upcoming trips
             </div>
             <div className='main-content-footer'>
             </div>
