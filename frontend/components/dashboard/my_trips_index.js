@@ -20,9 +20,8 @@ class MyTripsIndex extends React.Component {
               </p>
               <h3 className="sample-city-text">
                 <i className="fas fa-home" />
-                &nbsp; &nbsp; {days} Nights
-                &nbsp; &nbsp;
-                <i className="far fa-calendar-alt"><
+                &nbsp; &nbsp; {days} Nights &nbsp; &nbsp;
+                <i className="far fa-calendar-alt" />
                 {booking.start_date} => {booking.end_date} =>{days}
               </h3>
             </div>
